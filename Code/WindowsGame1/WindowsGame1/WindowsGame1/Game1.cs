@@ -20,6 +20,7 @@ namespace WindowsGame1
         SpriteBatch spriteBatch;
 
         private Texture2D cyborgTexture;
+        private Texture2D texture;
 
         public Game1()
         {
@@ -51,6 +52,7 @@ namespace WindowsGame1
 
             // TODO: use this.Content to load your game content here
             cyborgTexture = Content.Load<Texture2D>("graphs/cyborgPilot");
+            texture = Content.Load<Texture2D>("graphs/HeavenDevils");
         }
 
         /// <summary>
@@ -90,10 +92,11 @@ namespace WindowsGame1
             spriteBatch.Begin();
 
             spriteBatch.Draw(cyborgTexture, Vector2.Zero, Color.White);
+            spriteBatch.Draw(texture, new Vector2(0, 0), Color.White);
 
             spriteBatch.End();
 
-            base.Draw(gameTime);
+            base.Draw(gameTime);            
         }
     }
 }
