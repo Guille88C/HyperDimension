@@ -31,3 +31,4 @@ _ReSharper*/
 *.csproj
 *.contentproj
 *.cachefile
+*orig
