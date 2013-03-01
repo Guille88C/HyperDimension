@@ -19,6 +19,8 @@ namespace WindowsGame1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private Texture2D texture;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -48,6 +50,8 @@ namespace WindowsGame1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            texture = Content.Load<Texture2D>("graphs/HeavenDevils");
         }
 
         /// <summary>
@@ -86,6 +90,10 @@ namespace WindowsGame1
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, new Vector2(0, 0), Color.White);
+            spriteBatch.End();
         }
     }
 }
